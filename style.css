@@ -17,10 +17,30 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 40vh;
+    padding-top: 10vh;
 
 }
 .box {
-    border: 10px dotted rosybrown;
+    /* border: 10px dotted rosybrown; */
     text-align: center;
+    padding: 10%;
+    box-shadow: 10px 10px 5px 5px royalblue, -10px -10px 5px 5px royalblue;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-family: 'Ruge Boogie', cursive;
+    color: rebeccapurple;
+    font-size: 12rem;
+    text-transform: uppercase;
+    text-shadow: 5px 5px 5px plum;
+    padding: 0;
+    margin: 0;
+}
+
+img {
+    box-shadow: 10px 10px 5px 5px royalblue, -10px -10px 5px 5px royalblue;
 }
