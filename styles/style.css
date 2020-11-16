@@ -337,6 +337,9 @@ input {
   input[type="submit"] {
     font-size: 2rem;
   }
+  button {
+    font-size: 1.2rem;
+  }
 }
 
 header {
@@ -740,7 +743,7 @@ button:hover, button:focus {
     width: 300px;
     -webkit-transform: none;
             transform: none;
-    top: 21%;
+    top: 23%;
     right: 54%;
   }
   .breakoutClown3 {
@@ -771,7 +774,7 @@ button:hover, button:focus {
 @media (max-width: 815px) {
   .breakoutRoach {
     width: 250px;
-    top: 18%;
+    top: 24%;
     right: 50%;
   }
 }
@@ -779,7 +782,7 @@ button:hover, button:focus {
 @media (max-width: 642px) {
   .breakoutRoach {
     width: 200px;
-    top: 18%;
+    top: 24%;
     right: 50%;
   }
 }
@@ -816,7 +819,7 @@ button:hover, button:focus {
   }
   .breakoutRoach {
     width: 200px;
-    top: 24%;
+    top: 28%;
     right: 50%;
   }
   .breakoutClown1 {
@@ -854,7 +857,6 @@ button:hover, button:focus {
 @media (max-width: 600px) {
   .choice {
     width: 49%;
-    top: -18%;
   }
   .storyText {
     margin-top: 0;
@@ -866,5 +868,8 @@ button:hover, button:focus {
     width: 150px;
     top: 27%;
     right: 50%;
+  }
+  .navImg {
+    height: 30vh;
   }
 }

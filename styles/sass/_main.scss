@@ -230,7 +230,7 @@ button:hover, button:focus {
     .breakoutRoach {
         width: 300px;
         transform: none;
-        top: 21%;
+        top: 23%;
         right: 54%;
     }
     
@@ -266,7 +266,7 @@ button:hover, button:focus {
 @media (max-width: 815px){
     .breakoutRoach {
         width: 250px;
-        top: 18%;
+        top: 24%;
         right: 50%;
     }
 }
@@ -274,7 +274,7 @@ button:hover, button:focus {
 @media (max-width: 642px){
     .breakoutRoach {
         width: 200px;
-        top: 18%;
+        top: 24%;
         right: 50%;
     }
 }
@@ -320,7 +320,7 @@ button:hover, button:focus {
 
     .breakoutRoach {
         width: 200px;
-        top: 24%;
+        top: 28%;
         right: 50%;
     }
 
@@ -365,8 +365,7 @@ button:hover, button:focus {
 
 @media (max-width: 600px) {
     .choice {
-        width: 49%;	
-        top: -18%;
+        width: 49%;
     }
     .storyText {
         margin-top: 0;
@@ -378,6 +377,9 @@ button:hover, button:focus {
         width: 150px;
         top: 27%;
         right: 50%;
+    }
+    .navImg {  
+        height: 30vh;
     }
 }
 
