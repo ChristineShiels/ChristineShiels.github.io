@@ -1,16 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>v e r y w e b s i t e</title>
-    <link href="https://fonts.googleapis.com/css2?family=Ruge+Boogie&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>jQuery Adventure!</title>
+    <!-- link css stylesheet -->
+    <link rel="stylesheet" href="./styles/style.css">
+    <!-- link google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amarante&family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 </head>
 <body>
-    <div class="box">
-        <h1>s u c h<br>t i t l e</h1>
-        <img src="http://placecorgi.com/250" alt="much corgi">
-    </div>
+    <!-- header and title -->
+    <header class="cover">
+        <div class="wrapper container">
+            <h3>Choose Your Own Adventure</h1>
+                <h2>You're the Star of the Story!</h2>
+                <hr>
+                <h1>jQuery Adventure
+            </h3>
+            <hr>
+            <!-- will be dynamically updated -->
+            <h2 class="author">By C. Shiels & </h2>
+    </header>
+    <main class="wrapper container">
+        <!-- form for collecting user input -->
+        <section class="formSectionOn" id="form">
+            <div class="userInput">
+                <form action="" class="userChoices" id="userChoices">
+                    <div class="rowContainer">
+                        <div class="inputContainer">
+                            <label for="name">Please enter your name:</label>
+                            <input type="text" id="name" name="name" form="userChoices" maxlength="50" placeholder="Name" required>
+                        </div>
+                        <div class="inputContainer">
+                            <label for="pet">Favourite animal?</label>
+                            <input type="text" id="pet" name="pet" form="userChoices" maxlength="30" placeholder="Favourite Animal" required>
+                        </div>
+                    </div>
+                    <div class="rowContainer">
+                        <div class="inputContainer">
+                            <label for="veg">Write in a type of vegetable:</label>
+                            <input type="text" id="veg" name="veg" form="userChoices" maxlength="30" placeholder="Vegetable" required>
+                        </div>
+                        <div class="inputContainer">
+                            <label for="spice">Name a herb or spice:</label>
+                            <input type="text" id="spice" name="spice" form="userChoices" maxlength="30" placeholder="Herb or Spice" required>
+                        </div>
+                    </div>
+                    <div class="rowContainer">
+                        <div class="inputContainer">
+                            <label for="fruit">Write in a type of fruit:</label>
+                            <input type="text" id="fruit" name="fruit" form="userChoices" maxlength="30" placeholder="Fruit" required>
+                        </div>
+                        <div class="inputContainer">
+                            <label for="flower">Name a type of flower:</label>
+                            <input type="text" id="flower" name="flower" form="userChoices" maxlength="30" placeholder="Flower" required>
+                        </div>
+                    </div>
+                    <h2 class="radio">Which is scarier?</h2>
+                    <div class="radioInput">
+                        <input type="radio" id="cockroach" name="fright" value="cockroaches" form="userChoices">
+                        <label for="cockroach">Cockroaches</label>
+                    </div>
+                    <div class="radioInput">
+                        <input type="radio" id="clowns" name="fright" value="clowns" form="userChoices">
+                        <label for="clowns">Clowns</label>
+                    </div>
+                    <input type="submit" form="userChoices" value="Let's Start Your Story!"></input>
+                </form>
+            </div>
+        </section>
+        <!-- story pages -->
+        <section class="storyContainerOff container" id="story">
+            <!-- will be dynamically updated -->
+            <div class="container">
+                <div class="mainGraphic">
+                    <img src="./assets/jquery.jpg" alt="" class="mainImage">
+                    <img src="./assets/cash.gif" alt="" class="breakout">
+                    <!-- story text -->
+                    <div class="story">
+                        <p class="storyText">Welcome to your adventure! Click any button below to begin:</p>
+                    </div>
+                </div>
+                <!-- navigation buttons and images for story choices -->
+                <div class="navigation">
+                    <img class="navImg navImgOne" src="./assets/keyboard.jpg" alt="">
+                    <button class="choice choiceOne">Click Here If A Hotdog Is A Sandwich</button>
+                    <img class="navImg navImgTwo" src="./assets/code01.jpg" alt="">
+                    <button class="choice choiceTwo">Otherwise, Click Here</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- link jQuery and .js file -->
+    <script src='https://code.jquery.com/jquery-3.4.0.min.js'
+        integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+    <script src="./script.js"></script>
 </body>
+
 </html>

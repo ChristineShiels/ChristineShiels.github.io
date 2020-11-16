@@ -1,0 +1,60 @@
+// styling typography
+body {
+    color: $black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6, button {
+    font-family: 'Amarante', cursive;
+    text-transform: uppercase;
+}
+
+h1 {
+    color: $primary;
+    font-size: 6rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3, input[type="submit"] {
+    color: $white;
+    @include redHighlight;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+.choice {
+    color: $white;
+    @include redHighlight;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: none;
+    font-weight: 700;
+}
+
+input {
+    font-family: 'Amarante', cursive;
+}
+
+// responsive design
+@media (max-width: 633px) {
+    button {
+        font-size: 1.6rem;	
+    }
+
+}
+
+@media (max-width: 510px) {
+    body {
+        font-size: 1.6rem;
+    };
+
+    input[type="submit"] {
+        font-size: 2rem;	
+    }
+
+}
