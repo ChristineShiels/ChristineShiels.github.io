@@ -124,12 +124,14 @@
     border-top: none;
     transform: translateY(-15px);
     position: relative;
+    
 }
 
 .navImg {
     @include insideBorder;
     border-top: none;    
     max-width: 50%;
+    max-height: 55vh;
 }
 
 // evening out the borders
