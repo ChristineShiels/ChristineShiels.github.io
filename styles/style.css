@@ -631,6 +631,9 @@ input[type="submit"]:active {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   width: 92.5%;
   border: 20px solid #3e90f4;
   border-top: none;
@@ -644,8 +647,8 @@ input[type="submit"]:active {
   -webkit-box-shadow: -5px -5px #ffcc00, 5px -5px #ffcc00, -5px 5px #ffcc00, 5px 5px #ffcc00;
           box-shadow: -5px -5px #ffcc00, 5px -5px #ffcc00, -5px 5px #ffcc00, 5px 5px #ffcc00;
   border-top: none;
-  max-width: 50%;
-  max-height: 55vh;
+  width: 50%;
+  height: 35vh;
 }
 
 .navImg:first-of-type {

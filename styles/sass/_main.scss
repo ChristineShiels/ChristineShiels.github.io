@@ -118,6 +118,7 @@
 .navigation {
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
     width: 92.5%;
     // height: 25vh;
     @include outsideBorder;
@@ -130,8 +131,8 @@
 .navImg {
     @include insideBorder;
     border-top: none;    
-    max-width: 50%;
-    max-height: 55vh;
+    width: 50%;
+    height: 35vh;
 }
 
 // evening out the borders
