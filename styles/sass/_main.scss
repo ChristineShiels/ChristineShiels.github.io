@@ -170,6 +170,19 @@ button:hover, button:focus {
     background-color: $primary;
 }
 
+footer {
+    background-color: $primary;
+    color: $white;
+    font-weight: 300;
+    padding: 5px 25px;
+    margin: 5% 0 0 0;
+}
+
+footer a{
+    color: $secondary;
+}
+
+
 // responsive design
 @media (max-width: 1120px) {
     .breakoutRoach {
