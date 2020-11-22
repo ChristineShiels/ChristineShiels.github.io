@@ -1,0 +1,73 @@
+
+
+body, h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: white;
+}
+
+h1, h2, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 5rem;
+}
+
+h2 {
+    font-weight: 800;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+label, h3 {
+font-size: 2rem;
+}
+
+h4 {
+    font-size: 1.8rem;
+    font-weight: 900;
+    text-transform: Capitalize;
+}
+
+h5 {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+h6 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.radioLabels label {
+    font-weight: 300;
+    font-style: 1.6rem;
+}
+
+input, button {
+    color: $color-primary-4;
+    font-weight: 400;
+    font-size: 1.6rem;
+}
+
+.directionsList li {
+    font-size: 1.6rem;
+    font-weight: 300;
+}
+
+footer, a {
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+a{
+    color: $color-secondary-1-1;
+}
+
+.destName {
+    font-size: 1.8rem;
+}
