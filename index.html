@@ -2,102 +2,107 @@
 <html lang="en">
 
 <head>
-    <!--
-        Project 4 @ Juno College
-        Find a restaurant near you!
-        Creators: Christine Shiels & Ben Sarjeant
-    -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Christine & Ben's Map World</title>
+    <title>jQuery Adventure!</title>
+    <!-- link css stylesheet -->
     <link rel="stylesheet" href="./styles/style.css">
-
-    <!-- Font importations -->
+    <!-- link google fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Raleway:wght@700;800;900&display=swap" rel="stylesheet">
-
-    <!-- Style sheet required for MapQuest API to function -->
-    <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amarante&family=Montserrat:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 </head>
-
 <body>
-    <header>
-        <div class="wrapper title">
-            <h1>Find me some food!</h1>
-            <h2>Search for nearby restaurants!</h2>
-        </div>
+    <!-- header and title -->
+    <header class="cover">
+        <div class="wrapper container">
+            <h3>Choose Your Own Adventure</h1>
+                <h2>You're the Star of the Story!</h2>
+                <hr>
+                <h1>jQuery Adventure
+            </h3>
+            <hr>
+            <!-- will be dynamically updated -->
+            <h2 class="author">By C. Shiels & </h2>
     </header>
-    <main>
-        <!-- START OF MAIN FLEX CONTAINER/WRAPPER -->
-        <div class="flexContainer wrapper">
-            <!-- START OF SECTION HOLDING FORM AND RESULTS -->
-            <section class="formAndDirections">
-                <!-- START OF FORM WAITING USER INPUT -->
-                <form action="" class="form">
-                    <!-- FORM SECTION ASKING FOR USERS ADDRESS -->
-                    <label for="origin">What's your address?</label>
-                    <input type="text" name="origin" id="origin" placeholder="Address or Postal Code" maxlength="50" required>
-
-                    <!-- FORM SECTION ASKING FOR USERS CITY -->
-                    <label for="city">What city are you in?</label>
-                    <input type="text" name="city" id="city" placeholder="City" maxlength="35" required>
-
-                    <!-- FORM SECTION ASKING USER DISTANCE IN MINUTES -->
-                    <label for="radius">How far are you willing to travel?</label>
-                    <input type="number" name="radius" id="radius" placeholder="Time in minutes" min="1" max="60" required>
-
-                    <!-- FORM SECTION ASKING USER IF THEY'RE WALKING OR DRIVING -->
-                    <h3 class="formTitle">How are you getting there?</h3>
-                    <!-- WALKING -->
-                    <div class="radioLabels">
-                        <input type="radio" class="units" name="units" value="wmin" required>
-                        <label for="walk">Walking</label>
+    <main class="wrapper container">
+        <!-- form for collecting user input -->
+        <section class="formSectionOn" id="form">
+            <div class="userInput">
+                <form action="" class="userChoices" id="userChoices">
+                    <div class="rowContainer">
+                        <div class="inputContainer">
+                            <label for="name">Please enter your name:</label>
+                            <input type="text" id="name" name="name" form="userChoices" maxlength="50" placeholder="Name" required>
+                        </div>
+                        <div class="inputContainer">
+                            <label for="pet">Favourite animal?</label>
+                            <input type="text" id="pet" name="pet" form="userChoices" maxlength="30" placeholder="Favourite Animal" required>
+                        </div>
                     </div>
-                    <!-- DRIVING -->
-                    <div class="radioLabels">
-                        <input type="radio" class="units" name="units" value="dmin" required>
-                        <label for="drive">Driving</label>
+                    <div class="rowContainer">
+                        <div class="inputContainer">
+                            <label for="veg">Write in a type of vegetable:</label>
+                            <input type="text" id="veg" name="veg" form="userChoices" maxlength="30" placeholder="Vegetable" required>
+                        </div>
+                        <div class="inputContainer">
+                            <label for="spice">Name a herb or spice:</label>
+                            <input type="text" id="spice" name="spice" form="userChoices" maxlength="30" placeholder="Herb or Spice" required>
+                        </div>
                     </div>
-
-                    <!-- FORM SUBMISSION BUTTON -->
-                    <label for="submit" class='srOnly'>Submit</label>
-                    <input type="submit" class="submit" value="Find Food">
-
+                    <div class="rowContainer">
+                        <div class="inputContainer">
+                            <label for="fruit">Write in a type of fruit:</label>
+                            <input type="text" id="fruit" name="fruit" form="userChoices" maxlength="30" placeholder="Fruit" required>
+                        </div>
+                        <div class="inputContainer">
+                            <label for="flower">Name a type of flower:</label>
+                            <input type="text" id="flower" name="flower" form="userChoices" maxlength="30" placeholder="Flower" required>
+                        </div>
+                    </div>
+                    <h2 class="radio">Which is scarier?</h2>
+                    <div class="radioInput">
+                        <input type="radio" id="cockroach" name="fright" value="cockroaches" form="userChoices">
+                        <label for="cockroach">Cockroaches</label>
+                    </div>
+                    <div class="radioInput">
+                        <input type="radio" id="clowns" name="fright" value="clowns" form="userChoices">
+                        <label for="clowns">Clowns</label>
+                    </div>
+                    <input type="submit" form="userChoices" value="Let's Start Your Story!"></input>
                 </form>
-                <!-- END OF FORM -->
-
-
-                <!-- SECTION HOLDING WRITTEN DIRECTIONS -->
-                <section class="directions invisible">
-                    <h3>Directions to A place To Eat</h3>
-                    <ol class="directionsList"></ol>
-                </section>
-                <!-- END OF DIRECTION SECTION-->
-
-            </section>
-            <!-- END OF SECTION HOLDING FORM AND RESULTS -->
-
-            <!-- SECTION CREATED TO HOLD MAP -->
-            <section class="mapContainer">
-                <div id="map"></div>
-            </section>
-
-        </div>
-        <!-- END OF FLEX CONTAINER/WRAPPER -->
-
-        <footer>
-            <p>Created by Ben Sarjeant & Christine Shiels for <a href="https://www.JunoCollege.com">Juno College</a></p>
-        </footer>
+            </div>
+        </section>
+        <!-- story pages -->
+        <section class="storyContainerOff container" id="story">
+            <!-- will be dynamically updated -->
+            <div class="container">
+                <div class="mainGraphic">
+                    <img src="./assets/jquery.jpg" alt="" class="mainImage">
+                    <img src="./assets/cash.gif" alt="" class="breakout">
+                    <!-- story text -->
+                    <div class="story">
+                        <p class="storyText">Welcome to your adventure! Click any button below to begin:</p>
+                    </div>
+                </div>
+                <!-- navigation buttons and images for story choices -->
+                <div class="navigation">
+                    <img class="navImg navImgOne" src="./assets/keyboard.jpg" alt="">
+                    <button class="choice choiceOne">Click Here If A Hotdog Is A Sandwich</button>
+                    <img class="navImg navImgTwo" src="./assets/code01.jpg" alt="">
+                    <button class="choice choiceTwo">Otherwise, Click Here</button>
+                </div>
+            </div>
+        </section>
     </main>
-
-    <!-- IMPORTING MAPQUEST API -->
-    <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
-    <!-- IMPORTING JQUERY -->
-    <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
-    <!-- IMPORTING OUR SCRIPT -->
+    <!-- link jQuery and .js file -->
+    <script src='https://code.jquery.com/jquery-3.4.0.min.js'
+        integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
     <script src="./script.js"></script>
-
-
+    <footer>
+        <p>Made by Christine Shiels for <a href="www.junocollege.com">Juno College.</a> Gifs lovingly purloined from <a href="www.giphy.com">Giphy.</a></p>
+    </footer>
 </body>
 
 </html>

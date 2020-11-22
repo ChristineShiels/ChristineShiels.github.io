@@ -1,81 +1,63 @@
-// TYPOGRAPHY STYLING SHEET
-body, h3 {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    color: white;
+// styling typography
+body {
+    color: $black;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
 }
 
-h1, h2, h4, h5, h6 {
-    font-family: 'Raleway', sans-serif;
+h1, h2, h3, h4, h5, h6, button {
+    font-family: 'Amarante', cursive;
+    text-transform: uppercase;
 }
 
 h1 {
-    font-weight: 900;
-    font-size: 5rem;
-    text-transform: uppercase;
-    margin: 2%;
+    color: $primary;
+    font-size: 6rem;
 }
 
 h2 {
-    font-weight: 800;
-    font-size: 3rem;
-    text-transform: uppercase;
-    font-style: italic;
-    margin: 0;
+    font-size: 2rem;
 }
 
-h3 {
-    margin: 2% 0;
+h3, input[type="submit"] {
+    color: $white;
+    @include redHighlight;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
 }
 
-label, h3 {
-font-size: 2rem;
-}
-
-h4 {
-    font-size: 1.8rem;
-    font-weight: 900;
-    text-transform: Capitalize;
-}
-
-h5 {
-    font-size: 1.6rem;
+.choice {
+    color: $white;
+    @include redHighlight;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: none;
     font-weight: 700;
-    margin: 5% 0;
 }
 
-h6 {
-    font-size: 1.6rem;
-    font-weight: 700;
-    font-style: italic;
+input {
+    font-family: 'Amarante', cursive;
 }
 
-.radioLabels label {
-    font-weight: 300;
-    font-style: 1.6rem;
+// responsive design
+@media (max-width: 633px) {
+    button {
+        font-size: 1.4rem;	
+    }
+
 }
 
-input, button {
-    color: $color-primary-4;
-    font-weight: 400;
-    font-size: 1.6rem;
-}
+@media (max-width: 510px) {
+    body {
+        font-size: 1.6rem;
+    };
 
-.directionsList li {
-    font-size: 1.6rem;
-    font-weight: 300;
-}
+    input[type="submit"] {
+        font-size: 2rem;	
+    }
+    button {
+        font-size: 1.2rem;	
+    }
 
-footer, a {
-    font-size: 1.6rem;
-    font-weight: 400;
-}
-
-a {
-    color: $color-secondary-1-1;
-}
-
-// specific styling for 'get directions' destination title
-.destName {
-    font-size: 1.8rem;
 }
